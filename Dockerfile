@@ -1,4 +1,4 @@
-FROM vincejah/python-scientific:latest
+FROM vincejah/python-scientific:latest as builder
 
 # https://confluence.ecmwf.int/display/ECC/Releases
 ENV ECCODES_VERSION=2.17.0
@@ -51,4 +51,4 @@ RUN git clone https://github.com/jswhit/pygrib.git  \
 
 FROM vincejah/python-scientific:latest as final
 
-COPY --from=builder /usr/local/lib/python3.8/site-packages/ /usr/local/lib/python3.8/site-packages/
+COPY --from=builder /usr/local/ /usr/local/
