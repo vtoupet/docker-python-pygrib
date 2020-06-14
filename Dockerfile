@@ -1,4 +1,4 @@
-FROM vincejah/python-scientific:20200613 as builder
+FROM vincejah/python-scientific:release-20200613 as builder
 
 # https://confluence.ecmwf.int/display/ECC/Releases
 ENV ECCODES_VERSION=2.17.0
