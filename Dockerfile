@@ -44,7 +44,7 @@ RUN pip install pyproj numpy
 RUN git clone https://github.com/jswhit/pygrib.git  \
     && cd pygrib \
     && mv /setup.cfg . \
-    && git checkout v2.1.1rel \
+    && git checkout dbe46fb2b2a833c59dfc91cf49e4703ffa45447d \
     && python setup.py build \
     && python setup.py install \
     && python test.py
