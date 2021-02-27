@@ -1,7 +1,7 @@
-FROM vincejah/python-scientific:release-20201206 as builder
+FROM vincejah/python-scientific:release-20210227 as builder
 
 # https://confluence.ecmwf.int/display/ECC/Releases
-ENV ECCODES_VERSION=2.19.1
+ENV ECCODES_VERSION=2.20.0
 
 RUN apt-get update && apt-get install -y \
         cmake \
